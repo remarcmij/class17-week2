@@ -13,9 +13,6 @@ const validateDate = (field, value, errors) =>
 const validateNumber = (field, value, errors) =>
   Number.isFinite(value) ? errors : appendError(field, 'number', errors);
 
-const validateNumber = (field, value, errors) =>
-  Number.isFinite(value) ? errors : [...errors, `type of ${field} must be: number`];
-
 const validateCurrencyCode = (field, value, errors) =>
   CURRENCY_CODES.includes(value) ? errors : appendError(field, 'valid currency code', errors);
 
